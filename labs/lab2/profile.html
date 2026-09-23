@@ -42,7 +42,7 @@
                 align-items: center;/*Y justify*/
             }
         </style>
-        <title>Profile</title>
+        <title>Benjii Costa Profile</title>
     </head>
     <body style="margin: 0;"><!-- Remove the default margin -->
         <div
@@ -70,22 +70,14 @@
                         justify-content: center;/*X justify*/
                         align-items: center;/*Y justify*/
                     ">
-                    <a href="main.html"
-                        title="Main Page"
-                        aria-label="Bulk Proxy Forge Main Page"
-                        style="
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;/*X justify*/
-                            align-items: center;/*Y justify*/
-                        ">
-                        <img
-                        src="documentation/logo.png"
-                        alt=""
+                    <img
+                        src="logo.png"
+                        alt="IntroNest Logo"
                         style="
                             padding: 2% 2%;
+                            height: 100%;
+                            width: 100%;
                         ">
-                    </a>
                 </div>
                 <div
                     id="top_bar_empty_space"
@@ -93,8 +85,11 @@
                         /* border: 1px solid black; */
                         height: 100%;
                         flex: 1;/*Fill remaining space*/
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
                     ">
-                    <!-- Intentionally empty-->
+                    <h1>Benjii Costa</h1>
                 </div>
                 <div
                     id="top_bar_buttons_container"
@@ -109,13 +104,13 @@
                         padding: 2px 2px;
                         gap: 2px;/*Space between children*/
                     ">
-                    <button class="img_button"
+                    <!-- <button class="img_button"
                         title="Discord Server"
                         aria-label="Discord Server"
                         type="button"
                         >
                         <img src="documentation/discord.png" alt="">
-                    </button>
+                    </button> -->
                 </div>
             </div>
             <div
@@ -149,133 +144,57 @@
                         </div>
                         <div class="col"
                             style="
+                                border: 1px solid black;
                                 flex: 1;/*Fill remaining space*/
+                                justify-content: center;/*X justify*/
+                                align-items: center;/*Y justify*/
                             ">
                             <div class="row"
                                 style="
-                                    border: 1px solid black;
-                                    height: 10%;
+                                    height: 40%;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;/*X justify*/
+                                    align-items: center;/*Y justify*/
                                 ">
-                                <div class="add_deck_step">
-                                    Add New Deck
+                                <div class="col"
+                                    style="
+                                        width: 50%;
+                                        display: flex;
+                                        justify-content: center;/*X justify*/
+                                        align-items: center;/*Y justify*/
+                                    ">
+                                    <h2><strong>Interests</strong></h2>
+                                    <ul>
+                                        <li>Electric skateboards/vehicles</li>
+                                        <li>Making money</li>
+                                        <li>Meditation</li>
+                                    </ul>
                                 </div>
-                                <div class="add_deck_step">
-                                    Choose Look
-                                </div>
-                                <div class="add_deck_step">
-                                    Generate/Review Cards
-                                </div>
-                                <div class="add_deck_step">
-                                    Print Cards
+                                <div class="col"
+                                    style="
+                                        width: 50%;
+                                        display: flex;
+                                        justify-content: center;/*X justify*/
+                                        align-items: center;/*Y justify*/
+                                    ">
+                                    <h2>Hobbies</h2>
+                                    <ul>
+                                        <li>Spending time in nature</li>
+                                        <li>Relaxing</li>
+                                        <li>Riding bikes, boards, and any small thing that moves you</li>
+                                        <li>Organizing things</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="col"
+                            <div
                                 style="
-                                    border: 1px solid black;
-                                    flex: 1;/*Fill remaining space*/
+                                    height: 60%;
+                                    width: 100%;
+                                    text-align: center;
                                 ">
-                                <div class="row"
-                                    style="
-                                        height: 10%;
-                                        font-size: 40px;
-                                        padding: 0 8px;
-                                    ">
-                                    Add New Deck
-                                </div>
-                                <div class="row"
-                                    style="
-                                        height: 2%;
-                                    ">
-                                </div>
-                                <div class="row"
-                                    style="
-                                        padding: 2px 8px;
-                                        height: 10%;
-                                        overflow-wrap: anywhere;
-                                        align-items: flex-end;
-                                        font-size: 125%;
-                                    ">
-                                    Paste a deck link below to get started. We'll get all of the cards and their info for you.
-                                </div>
-                                <div class="row"
-                                    style="
-                                        height: 10%;
-                                        padding: 0 4px
-                                    ">
-                                    <input
-                                        type="text"
-                                        placeholder="Paste deck link here"
-                                        style="
-                                            width: 100%;
-                                            height: 100%;
-                                            padding: 2px 4px;
-                                            font-size: 16px;
-                                    ">
-                                </div>
-                                <div class="row"
-                                    style="
-                                        padding: 2px 8px;
-                                        height: 8%;
-                                        overflow-wrap: anywhere;
-                                        align-items: flex-start;
-                                    ">
-                                    Supports links from Scryfall, MTGGoldfish, Moxfield, Archidekt, and TappedOut.
-                                </div>
-                                <div class="row"
-                                    style="
-                                        flex: 1;
-                                    ">
-                                    <div class="col"
-                                        style="
-                                            width: 20%;
-                                        ">
-                                        <!-- Intentionally empty -->
-                                    </div>
-                                    <div class="col"
-                                        style="
-                                            flex: 1;/*Fill remaining space*/
-                                        ">
-                                        <div class="row"
-                                            style="
-                                                height: 20%;
-                                            ">
-                                        </div>
-                                        <div class="row"
-                                            style="
-                                                flex: 1;/*Fill remaining space*/
-                                            ">
-                                            <a href="choose_look.html"
-                                                style="
-                                                    border: 1px solid black;
-                                                    padding: 2% 4%;
-                                                    height: 100%;
-                                                    width: 100%;
-                                                    align-content: center;/*Y justify*/
-                                                    text-align: center;
-                                                    background-color: lightgray;
-                                                    border-radius: 0.2rem;
-                                                    color: black;
-                                                    text-decoration: none;
-                                                    line-height: 1;
-                                                    text-box: trim-both cap alphabetic;
-                                                    text-fit: grow;
-                                                ">
-                                                Continue
-                                            </a>
-                                        </div>
-                                        <div class="row"
-                                            style="
-                                                height: 20%;
-                                            ">
-                                        </div>
-                                    </div>
-                                    <div class="col"
-                                        style="
-                                            width: 20%;
-                                        ">
-                                        <!-- Intentionally empty -->
-                                    </div>
-                                </div>
+                                <h3><em>Something only I've done</em></h3>
+                                <p>Attended a free Maroon V concert on Narragansett beach.</p>
                             </div>
                         </div>
                         <div class="row"
@@ -284,6 +203,19 @@
                             ">
                             <!-- Intentionally empty -->
                         </div>
+                     </div>
+                     <div class="col"
+                        style="
+                            width: 40%;
+                            display: flex;
+                            justify-content: center;/*X justify*/
+                            align-items: center;/*Y justify*/
+                        ">
+                        <img src="profile_img.png"
+                            alt="Name's Profile Picture"
+                            style="
+                                padding: 10%
+                            ">
                      </div>
                      <div class="col"
                         style="
