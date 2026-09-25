@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            * {
+                /*Make sizing include padding and borders.*/
+                box-sizing: border-box;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .col {
+                /* border: 1px solid black; */
+                display: flex;
+                flex-direction: column;
+            }
+
+            .row {
+                /* border: 1px solid black; */
+                display: flex;
+                flex-direction: row;
+            }
+
+            /* Not used anymore, but might use it later. 
+            .text_button {
+                padding: 1% 2% 3%;
+                height: 100%;
+                aspect-ratio: 1/1;
+                line-height: 1;
+                text-box: trim-both cap alphabetic;
+            } */
+
+            .img_button {
+                padding: 2px 2px;
+                height: 100%;
+                flex: 0 0 auto;
+                display: flex;
+                justify-content: center;/*X justify*/
+                align-items: center;/*Y justify*/
+            }
+        </style>
+        <title>BPF Main Page</title>
+    </head>
+    <body style="margin: 0;"><!-- Remove the default margin -->
+        <div
+            id="page_container"
+            class="col"
+            style="
+                height: 100dvh;
+            ">
+            <div
+                id="top_bar"
+                class="row"
+                style="
+                    border: 1px solid black;
+                    height: 10%;
+                    align-items: center;/*Y justify, not really needed here, but goot to have in rows in general.*/
+                ">
+                <div 
+                    id="logo_container"
+                    style="
+                        /* border: 1px solid black; */
+                        max-width: 30%;
+                        height: 100%;
+                        width: fit-content;
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                    ">
+                    <img
+                        src="documentation/logo.png"
+                        alt="Bulk Proxy Forge Logo"
+                        style="
+                            padding: 2% 2%;
+                        ">
+                </div>
+                <div
+                    id="top_bar_empty_space"
+                    style="
+                        /* border: 1px solid black; */
+                        height: 100%;
+                        flex: 1;/*Fill remaining space*/
+                    ">
+                    <!-- Intentionally empty-->
+                </div>
+                <div
+                    id="top_bar_buttons_container"
+                    style="
+                        /* border: 1px solid black; */
+                        max-width: 70%;
+                        height: 100%;
+                        width: fit-content;
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                        padding: 2px 2px;
+                        gap: 2px;/*Space between children*/
+                    ">
+                    <button class="img_button"
+                        title="Discord Server"
+                        aria-label="Discord Server"
+                        type="button"
+                        >
+                        <img src="documentation/discord.png" alt="">
+                    </button>
+                </div>
+            </div>
+            <div
+                id="main_area"
+                style="
+                    /* border: 1px solid black; */
+                    flex: 1;/*Fill remaining space*/
+                ">
+                <div
+                    id="main_area_padding_row"
+                    class="row"
+                    style="
+                        /* border: 1px solid black; */
+                        height: 100%;
+                    ">
+                     <div class="col"
+                        style="
+                            width: 10%;
+                        ">
+                        <!-- Intentionally empty-->
+                     </div>
+                     <div class="col"
+                        style="
+                            flex: 1;/*Fill remaining space*/
+                        ">
+                        <div class="row"
+                            style="
+                                height: 10%;
+                            ">
+                            <!-- Intentionally empty -->
+                        </div>
+                        <div class="col"
+                            style="
+                                border: 1px solid black;
+                                flex: 1;/*Fill remaining space*/
+                                padding: 0 8px;
+                            ">
+                            <div class="row">
+                                <h1>
+                                    Bulk Proxy Forge
+                                </h1>
+                            </div>
+                            <div class="row">
+                                <p>
+                                    Bulk Proxy Forge turns a deck list into printable proxy cards.
+                                    <strong>Create an entire deck at once</strong> instead of preparing
+                                    every card individually.
+                                </p>
+                            </div>
+                            <div class="row">
+                                <p>
+                                    Start with a deck link and follow a few simple steps to create cards
+                                    that are <em>ready for printing</em>.
+                                </p>
+                            </div>
+                            <div class="row"
+                                style="
+                                    padding: 8px 4px;
+                                ">
+                                <div class="col"
+                                    style="
+                                        width: 20%;
+                                    ">
+                                    <!-- Intentionally empty -->
+                                </div>
+                                <div class="col"
+                                    style="
+                                        flex: 1;/*Fill remaining space*/
+                                    ">
+                                    <a href="add_new_deck.html"
+                                        style="
+                                            border: 1px solid black;
+                                            padding: 2% 4%;
+                                            width: 100%;
+                                            align-content: center;/*Y justify*/
+                                            text-align: center;
+                                            color: black;
+                                            text-decoration: none;
+                                        ">
+                                        Add New Deck
+                                    </a>
+                                </div>
+                                <div class="col"
+                                    style="
+                                        width: 20%;
+                                    ">
+                                    <!-- Intentionally empty -->
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h2>
+                                    How It Works
+                                </h2>
+                                <ol>
+                                    <li>Provide a link to your deck.</li>
+                                    <li>Choose the look of your cards.</li>
+                                    <li>Generate and review the cards.</li>
+                                    <li>The cards will be sent to the printer website.</li>
+                                </ol>
+                            </div>
+                            <hr style="width: 100%;">
+                            <div class="row">
+                                <p>
+                                    Card information is provided by
+                                    <a href="https://scryfall.com/"
+                                        target="_blank"
+                                        >Scryfall</a>.
+                                    Questions can be sent to
+                                    <a href="mailto:YOUR_URI_EMAIL@uri.edu">my URI email address</a>.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row"
+                            style="
+                                height: 10%;
+                            ">
+                            <!-- Intentionally empty -->
+                        </div>
+                     </div>
+                     <div class="col"
+                        style="
+                            width: 10%;
+                        ">
+                        <!-- Intentionally empty-->
+                     </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
