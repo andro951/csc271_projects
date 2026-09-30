@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<!--
+    Name: Isaac Richards
+    Date: September 30, 2026
+    Description: Example recipe site to demonstrate images, video, tables, and input elements.
+
+    AI-assisted suggestion: ChatGPT created the images and answered questions about code.
+-->
+<html lang="en">
+    <head>
+        <style>
+            * {
+                /*Make sizing include padding and borders.*/
+                box-sizing: border-box;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .col {
+                /* border: 1px solid black; */
+                display: flex;
+                flex-direction: column;
+            }
+
+            .row {
+                /* border: 1px solid black; */
+                display: flex;
+                flex-direction: row;
+            }
+
+            /* Not used anymore, but might use it later. 
+            .text_button {
+                padding: 1% 2% 3%;
+                height: 100%;
+                aspect-ratio: 1/1;
+                line-height: 1;
+                text-box: trim-both cap alphabetic;
+            } */
+
+            .img_button {
+                padding: 2px 2px;
+                height: 100%;
+                flex: 0 0 auto;
+                display: flex;
+                justify-content: center;/*X justify*/
+                align-items: center;/*Y justify*/
+            }
+        </style>
+        <title>Baking with Fire</title>
+    </head>
+    <body style="margin: 0;"><!-- Remove the default margin -->
+        <div
+            id="page_container"
+            class="col"
+            style="
+                height: 100dvh;
+            ">
+            <div
+                id="top_bar"
+                class="row"
+                style="
+                    border: 1px solid black;
+                    height: 10%;
+                    align-items: center;/*Y justify, not really needed here, but goot to have in rows in general.*/
+                ">
+                <div 
+                    id="logo_container"
+                    style="
+                        /* border: 1px solid black; */
+                        max-width: 30%;
+                        height: 100%;
+                        width: fit-content;
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                    ">
+                    <img
+                        src="images/logo.png"
+                        alt="IntroNest Logo"
+                        style="
+                            padding: 2% 2%;
+                            height: 100%;
+                            width: 100%;
+                        ">
+                </div>
+                <div
+                    id="top_bar_empty_space"
+                    style="
+                        /* border: 1px solid black; */
+                        height: 100%;
+                        flex: 1;/*Fill remaining space*/
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                    ">
+                    <h1>Banana Brown Sugar Cookies</h1>
+                </div>
+                <div
+                    id="top_bar_buttons_container"
+                    style="
+                        /* border: 1px solid black; */
+                        max-width: 70%;
+                        height: 100%;
+                        width: fit-content;
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                        padding: 2px 2px;
+                        gap: 2px;/*Space between children*/
+                    ">
+                    <!-- <button class="img_button"
+                        title="Discord Server"
+                        aria-label="Discord Server"
+                        type="button"
+                        >
+                        <img src="documentation/discord.png" alt="">
+                    </button> -->
+                </div>
+            </div>
+            <div
+                id="main_area"
+                style="
+                    /* border: 1px solid black; */
+                    flex: 1;/*Fill remaining space*/
+                ">
+                <div
+                    id="main_area_padding_row"
+                    class="row"
+                    style="
+                        /* border: 1px solid black; */
+                        height: 100%;
+                    ">
+                     <div class="col"
+                        style="
+                            width: 10%;
+                        ">
+                        <!-- Intentionally empty-->
+                     </div>
+                     <div class="col"
+                        style="
+                            flex: 1;/*Fill remaining space*/
+                        ">
+                        <div class="row"
+                            style="
+                                height: 10%;
+                            ">
+                            <!-- Intentionally empty -->
+                        </div>
+                        <div class="col"
+                            style="
+                                border: 1px solid black;
+                                flex: 1;/*Fill remaining space*/
+                                justify-content: center;/*X justify*/
+                                align-items: center;/*Y justify*/
+                            ">
+                            <div 
+                                style="
+                                    padding: 10px;
+                                ">
+                                <p>
+                                    This is a weird recipe I came up with a few years ago.
+                                    Initially, we were just out of eggs, so I tried to find a substitute for eggs, and applesauce worked pretty well.
+                                    Although, the cookies tasted a bit like apples which wasn't great.
+                                    Later, I decided to try making cookie dough that was safe to eat because I prefer cookie dough over cookies.
+                                    I like bananas and they are very cheap, so I decided to use bananas as a substitute for eggs.
+                                    I also like brown sugar, so I decided to make them banana brown sugar cookie dough.
+                                    After trying it, still getting a terrible stomach ache after, and looking it up online, I found out you would have to bake the flour to make it safe to eat raw, so that idea was kind of a bust.
+                                    But, I still like the cookies, so I kept the recipe.
+                                </p>
+                            </div>
+                            <div
+                                style="
+                                    padding: 10px;
+                                ">
+                                <table>
+                                    <tr>
+                                        <th scope="col">Ingredient</th>
+                                        <th scope="col">Quantity</th>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Large Banana</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3 cups</td>
+                                        <td>Brown Sugar</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1/4</td>
+                                        <td>Sugar</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2 sticks</td>
+                                        <td>Butter</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 tbsp</td>
+                                        <td>Vanilla Extract</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 cups</td>
+                                        <td>Flower</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 tsp</td>
+                                        <td>Baking Soda</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1/2 tsp</td>
+                                        <td>Baking Powder</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1 tsp</td>
+                                        <td>Salt</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row"
+                            style="
+                                height: 10%;
+                            ">
+                            <!-- Intentionally empty -->
+                        </div>
+                     </div>
+                     <div class="col"
+                        style="
+                            width: 40%;
+                            display: flex;
+                            justify-content: center;/*X justify*/
+                            align-items: center;/*Y justify*/
+                        ">
+                        <img src="images/cookies.png"
+                            alt="Name's Profile Picture"
+                            style="
+                                padding: 10%
+                            ">
+                     </div>
+                     <div class="col"
+                        style="
+                            width: 10%;
+                        ">
+                        <!-- Intentionally empty-->
+                     </div>
+                </div>
+            </div>
+        </div>
+        <div
+            style="
+                padding: 10px;
+            ">
+            <h2>WARNING: This video is not the same recipie. It is a similar recipie.</h2>
+            <iframe 
+                src="https://www.youtube.com/embed/7IoIIafkILc"
+                width="560"
+                height="315"
+                title="YouTube video player"
+                >
+            </iframe>
+        </div>
+        <div
+            style="
+                /* border: 1px solid black; */
+                flex: 1;/*Fill remaining space*/
+            ">
+            <h2>Arroz e Feijão com Frango or Brazilian Rice and Beans with Chicken</h2>
+            <div
+                class="row"
+                style="
+                    /* border: 1px solid black; */
+                    height: 100%;
+                ">
+                    <div class="col"
+                    style="
+                        width: 10%;
+                    ">
+                    <!-- Intentionally empty-->
+                    </div>
+                    <div class="col"
+                    style="
+                        flex: 1;/*Fill remaining space*/
+                    ">
+                    <div class="row"
+                        style="
+                            height: 10%;
+                        ">
+                        <!-- Intentionally empty -->
+                    </div>
+                    <div class="col"
+                        style="
+                            border: 1px solid black;
+                            flex: 1;/*Fill remaining space*/
+                            justify-content: center;/*X justify*/
+                            align-items: center;/*Y justify*/
+                        ">
+                        <div 
+                            style="
+                                padding: 10px;
+                            ">
+                            <p>My favorite dish is a simple Brazilian classic: <strong>Arroz e Feijão com Frango </strong>or <strong> Rice and Beans with Chicken</strong></p>
+                            <p>Other than it tasting good, it reminds me of my childhood. Just the smell brings me back to simpler times
+                                when I would for my mom to prepare this dish.</p>
+                            <p>It's also the most commonly eaten dish in Brazil so I know I'm not the only one that thinks this dish is special.</p>
+                            <p>You can eat it plainly or use it as a base to add more food!</p>
+                        </div>
+                        <div
+                            style="
+                                padding: 10px;
+                            ">
+                            <table>
+                                <tr>
+                                    <th>Ingredients</th>
+                                    <th>Amount</th>
+                                </tr>
+                                <tr>
+                                    <td>Rice</td>
+                                    <td>150g</td>
+                                </tr>
+                                <tr>
+                                    <td>Beans</td>
+                                    <td>150g</td>
+                                </tr>
+                                <tr>
+                                    <td>Garlic</td>
+                                    <td>6 cloves</td>
+                                </tr>
+                                <tr>
+                                    <td>Onion</td>
+                                    <td>2 medium</td>
+                                </tr>
+                                <tr>
+                                    <td>Chicken</td>
+                                    <td>150g</td>
+                                </tr>
+                                <tr>
+                                    <td>Salt</td>
+                                    <td>4 tbsp</td>
+                                </tr>
+                                <tr>
+                                    <td>Brazilian Spice</td>
+                                    <td>2 tbsp</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row"
+                        style="
+                            height: 10%;
+                        ">
+                        <!-- Intentionally empty -->
+                    </div>
+                    </div>
+                    <div class="col"
+                    style="
+                        width: 40%;
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                    ">
+                    <img src="images/chicken.png"
+                        alt="Name's Profile Picture"
+                        style="
+                            padding: 10%
+                        ">
+                    </div>
+                    <div class="col"
+                    style="
+                        width: 10%;
+                    ">
+                    <!-- Intentionally empty-->
+                    </div>
+            </div>
+        </div>
+        <div
+            style="
+                /* border: 1px solid black; */
+                flex: 1;/*Fill remaining space*/
+            ">
+            <h2>Jollof Rice</h2>
+            <div
+                class="row"
+                style="
+                    /* border: 1px solid black; */
+                    height: 100%;
+                ">
+                    <div class="col"
+                    style="
+                        width: 10%;
+                    ">
+                    <!-- Intentionally empty-->
+                    </div>
+                    <div class="col"
+                    style="
+                        flex: 1;/*Fill remaining space*/
+                    ">
+                    <div class="row"
+                        style="
+                            height: 10%;
+                        ">
+                        <!-- Intentionally empty -->
+                    </div>
+                    <div class="col"
+                        style="
+                            border: 1px solid black;
+                            flex: 1;/*Fill remaining space*/
+                            justify-content: center;/*X justify*/
+                            align-items: center;/*Y justify*/
+                        ">
+                        <div 
+                            style="
+                                padding: 10px;
+                            ">
+                            <p>
+                                I am of African descent, more specifically I am Nigerian, and one dish that had become a big part of my pallate growing up had to be <strong>Jollof Rice.</strong> Every other week, either on a Wednesday or a Friday, I would come home from school finding my mother cooking Jollof Rice, and some days, that Jollof Rice would get me out of the worst of moods and the worst of days. Usually, the Jollof Recipe is served with some form of meat, usually beef or chicken, but I've tried other variations of Jollof Rice that were made with Guinea fowl or even shrimp.
+                            </p>
+                        </div>
+                        <div
+                            style="
+                                padding: 10px;
+                            ">
+                            <table>
+                                <tr>
+                                    <td>Ingredient's For Mustaan's Dish (1x)</td>
+                                    <td>Ingredient's For Isaac's Dish</td>
+                                    <td>Ingredient's For Diego's Dish</td>
+                                </tr>
+                                <tr>
+                                    <td>2 Cups of Rice</td>
+                                    <td>3 Large Bananas</td>
+                                    <td>150g Rice</td>
+                                </tr>
+                                <tr>
+                                    <td>1/2 cup vegetable oil</td>
+                                    <td>3 cups Brown Sugar</td>
+                                    <td>150g Beans</td>
+                                </tr>
+                                <tr>
+                                    <td>1 large onion, finely chopped</td>
+                                    <td>1/4 cup Sugar</td>
+                                    <td>2 cloves garlic</td>
+                                </tr>
+                                <tr>
+                                    <td>1 red bell pepper</td>
+                                    <td>2 sticks Butter</td>
+                                    <td>4 cloves garlic</td>
+                                </tr>
+                                <tr>
+                                    <td>2 medium tomatoes</td>
+                                    <td>1 tbsp vanilla extract</td>
+                                    <td>2 medium onion</td>
+                                </tr>
+                                <tr>
+                                    <td>3 tablespoons tomato paste</td>
+                                    <td>5 cups flower</td>
+                                    <td>150g chicken</td>
+                                </tr>
+                                <tr>
+                                    <td>2 cloves garlic, minced</td>
+                                    <td>1 tsp baking soda</td>
+                                    <td>4 tbsp Salt</td>
+                                </tr>
+                                <tr>
+                                    <td>1 teaspoon grated ginger</td>
+                                    <td>1/2 tsp baking powder</td>
+                                    <td>4 tbsp Brazillian Spice</td>
+                                </tr>
+                                <tr>
+                                    <td>1 teaspoon thyme</td>
+                                    <td>1 tsp salt</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1 teaspoon curry powder</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1 teaspoon paprika</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1 bay leaf</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1 teaspoon salt</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1/2 teaspoon black pepper</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>1-2 teaspoons chili or cayenne pepper</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2 and 1/2 cups chicken broth</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row"
+                        style="
+                            height: 10%;
+                        ">
+                        <!-- Intentionally empty -->
+                    </div>
+                    </div>
+                    <div class="col"
+                    style="
+                        width: 40%;
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                    ">
+                    <img src="images/chicken.png"
+                        alt="Name's Profile Picture"
+                        style="
+                            padding: 10%
+                        ">
+                    </div>
+                    <div class="col"
+                    style="
+                        width: 10%;
+                    ">
+                    <!-- Intentionally empty-->
+                    </div>
+            </div>
+        </div>
+    </body>
+</html>
