@@ -51,7 +51,7 @@
                 align-items: center;/*Y justify*/
             }
         </style>
-        <title>BPF Main Page</title>
+        <title>BPF Help</title>
     </head>
     <body style="margin: 0;"><!-- Remove the default margin -->
         <div
@@ -60,6 +60,8 @@
             style="
                 height: 100dvh;
             ">
+
+            <!-- Top Bar -->
             <div
                 id="top_bar"
                 class="row"
@@ -79,12 +81,22 @@
                         justify-content: center;/*X justify*/
                         align-items: center;/*Y justify*/
                     ">
-                    <img
+                    <a href="main.html"
+                        title="Main Page"
+                        aria-label="Bulk Proxy Forge Main Page"
+                        style="
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;/*X justify*/
+                            align-items: center;/*Y justify*/
+                        ">
+                        <img
                         src="images/logo.png"
-                        alt="Bulk Proxy Forge Logo"
+                        alt=""
                         style="
                             padding: 2% 2%;
                         ">
+                    </a>
                 </div>
                 <div
                     id="top_bar_empty_space"
@@ -117,6 +129,8 @@
                     </button>
                 </div>
             </div>
+
+            <!-- Main Area -->
             <div
                 id="main_area"
                 style="
@@ -142,7 +156,7 @@
                         ">
                         <div class="row"
                             style="
-                                height: 10%;
+                                height: 2%;
                             ">
                             <!-- Intentionally empty -->
                         </div>
@@ -154,10 +168,13 @@
                             ">
                             <div class="row">
                                 <h1>
-                                    Bulk Proxy Forge
+                                    Help
                                 </h1>
                             </div>
                             <div class="row">
+                                <h2>
+                                    What is Bulk Proxy Forge?
+                                </h2>
                                 <p>
                                     Bulk Proxy Forge turns a deck list into printable proxy cards.
                                     <strong>Create an entire deck at once</strong> instead of preparing
@@ -231,7 +248,7 @@
                         </div>
                         <div class="row"
                             style="
-                                height: 10%;
+                                height: 2%;
                             ">
                             <!-- Intentionally empty -->
                         </div>
