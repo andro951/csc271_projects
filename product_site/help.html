@@ -124,12 +124,13 @@
                         title="Discord Server"
                         aria-label="Discord Server"
                         type="button"
+                        onclick="window.open('https://discord.gg/au2rCSbG2B', '_blank')"
                         >
                         <img src="images/discord.png" alt="">
                     </button>
                 </div>
             </div>
-
+            
             <!-- Main Area -->
             <div
                 id="main_area"
@@ -175,6 +176,8 @@
                                 <h2>
                                     What is Bulk Proxy Forge?
                                 </h2>
+                            </div>
+                            <div class="row">
                                 <p>
                                     Bulk Proxy Forge turns a deck list into printable proxy cards.
                                     <strong>Create an entire deck at once</strong> instead of preparing
@@ -182,10 +185,41 @@
                                 </p>
                             </div>
                             <div class="row">
-                                <p>
-                                    Start with a deck link and follow a few simple steps to create cards
-                                    that are <em>ready for printing</em>.
-                                </p>
+                                <h2>
+                                    Supported Websites
+                                </h2>
+                            </div>
+                            <div class="row">
+                                <table>
+                                    <tr>
+                                        <th scope="col">Site</th>
+                                        <th scope="col">Supported</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Scryfall</td>
+                                        <td>Yes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Moxfield</td>
+                                        <td>Coming Soon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>MTGGoldfish</td>
+                                        <td>Coming Soon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>TappedOut</td>
+                                        <td>Coming Soon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ManaBox</td>
+                                        <td>Coming Soon</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Deckstats</td>
+                                        <td>Coming Soon</td>
+                                    </tr>
+                                </table>
                             </div>
                             <div class="row"
                                 style="
@@ -197,23 +231,14 @@
                                     ">
                                     <!-- Intentionally empty -->
                                 </div>
-                                <div class="col"
-                                    style="
-                                        flex: 1;/*Fill remaining space*/
-                                    ">
-                                    <a href="add_new_deck.html"
+                                <form>
+                                    <div class="col"
                                         style="
-                                            border: 1px solid black;
-                                            padding: 2% 4%;
-                                            width: 100%;
-                                            align-content: center;/*Y justify*/
-                                            text-align: center;
-                                            color: black;
-                                            text-decoration: none;
+                                            flex: 1;/*Fill remaining space*/
                                         ">
-                                        Add New Deck
-                                    </a>
-                                </div>
+                                        <!-- Form here -->
+                                    </div>
+                                </form>
                                 <div class="col"
                                     style="
                                         width: 20%;
