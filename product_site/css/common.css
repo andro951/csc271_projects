@@ -1,3 +1,9 @@
+/*
+Created by Isaac Richards
+11OCT26
+Common styling for BulkProxyForge. 
+*/
+
 * {
     /*Make sizing include padding and borders.*/
     box-sizing: border-box;
@@ -22,14 +28,41 @@ a {
     color: white;
 }
 
+/* visited is intentionally not different because I use a for flow between pages as part of a process, not wiki-style navigation. */
+a:link, a:visited {
+    color: white;
+}
+
+a:hover {
+    color: orangered;
+}
+
+h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    color: orangered;
+}
+
+h2 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    color: orangered;
+}
+
+p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
 .col {
-    /* border: 1px solid black; */
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: column;
 }
 
 .row {
-    /* border: 1px solid black; */
+    /* border: 1px solid white; */
     display: flex;
     flex-direction: row;
 }
@@ -53,10 +86,24 @@ a {
 }
 
 .add_deck_step {
-    /* border: 1px solid black; */
+    /* border: 1px solid white; */
     height: 100%;
     flex: 1;/*Each child takes up 1 unit of space.*/
     display: flex;
     justify-content: center;/*X justify*/
     align-items: center;/*Y justify*/
+}
+
+#continue_button {
+    border: 1px solid white;
+    padding: 2% 4%;
+    height: 100%;
+    width: 100%;
+    align-content: center;/*Y justify*/
+    text-align: center;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    line-height: 1;
+    text-box: trim-both cap alphabetic;
+    text-fit: grow;
 }
