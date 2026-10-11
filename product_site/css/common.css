@@ -105,5 +105,5 @@ p {
     text-decoration: none;
     line-height: 1;
     text-box: trim-both cap alphabetic;
-    text-fit: grow;
+    font-size: 32px;
 }
