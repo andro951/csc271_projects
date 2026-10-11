@@ -8,13 +8,18 @@ img {
     max-height: 100%;
 }
 
-body {
-    background-color: red;
+button {
+    background-color: orangered;
+    border-radius: 16px;
 }
 
-button {
-    background-color: red;
-    border-radius: 16px;
+body {
+    background-color: #1C252B;
+    color: white;
+}
+
+a {
+    color: white;
 }
 
 .col {
