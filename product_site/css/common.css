@@ -104,6 +104,8 @@ p {
     border-radius: 0.2rem;
     text-decoration: none;
     line-height: 1;
-    text-box: trim-both cap alphabetic;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 32px;
 }
