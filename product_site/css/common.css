@@ -67,6 +67,10 @@ p {
     flex-direction: row;
 }
 
+.header {
+    background-color: #263139;
+}
+
 /* Not used anymore, but might use it later. 
 .text_button {
     padding: 1% 2% 3%;
