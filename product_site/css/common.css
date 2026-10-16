@@ -163,4 +163,12 @@ p {
     .row_gutter {
         height: 0%;
     }
+
+    #main_area {
+        font-size: 18px;
+    }
+
+    #main_area p {
+        font-size: 18px;
+    }
 }
