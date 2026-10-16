@@ -67,6 +67,26 @@ p {
     flex-direction: row;
 }
 
+.col_fill {
+    /* border: 1px solid white; */
+    width: 100%;
+    flex: 1;
+}
+
+.row_fill {
+    /* border: 1px solid white; */
+    height: 100%;
+    flex: 1;
+}
+
+.col_gutter {
+    width: 10%;
+}
+
+.row_gutter {
+    height: 10%;
+}
+
 .header {
     background-color: #263139;
 }
@@ -133,4 +153,14 @@ p {
     align-items: center;
     justify-content: center;
     font-size: 32px;
+}
+
+@media (max-width: 600px) {
+    .col_gutter {
+        width: 0%;
+    }
+
+    .row_gutter {
+        height: 0%;
+    }
 }
