@@ -89,6 +89,8 @@ p {
 
 .header {
     background-color: #263139;
+    padding: 0px;
+    overflow: visible;
 }
 
 /* Not used anymore, but might use it later. 
@@ -113,6 +115,10 @@ p {
     text-decoration: none;
 }
 
+.img_button:hover {
+    background-color: #FF5A1F;
+}
+
 .site_nav_button {
     padding: 2px 2px;
     height: 100%;
@@ -126,6 +132,10 @@ p {
     text-decoration: none;
 }
 
+.site_nav_button:hover {
+    background-color: #FF5A1F;
+}
+
 .site_nav_button.selected {
     background-color: #BB2600;
 }
@@ -137,6 +147,24 @@ p {
     display: flex;
     justify-content: center;/*X justify*/
     align-items: center;/*Y justify*/
+}
+
+.logo_container {
+    /* border: 1px solid white; */
+    max-width: 30%;
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    justify-content: center;/*X justify*/
+    align-items: center;/*Y justify*/
+}
+
+.logo_container:hover {
+    filter: brightness(1.35);
+}
+
+.logo_container.selected {
+    filter: brightness(1.25);
 }
 
 #continue_button {
