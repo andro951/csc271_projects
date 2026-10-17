@@ -20,7 +20,6 @@ button {
 }
 
 body {
-    background-color: #1C252B;
     color: white;
 }
 
@@ -138,6 +137,14 @@ p {
 
 .site_nav_button.selected {
     background-color: #BB2600;
+}
+
+.site_nav_button:active {
+    background-color: #BB2600;
+}
+
+#main_area {
+    background-color: #1C252B;
 }
 
 .add_deck_step {
