@@ -175,6 +175,11 @@ p {
 }
 
 #continue_button {
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    cursor: pointer;
     border: 1px solid white;
     padding: 2% 4%;
     height: 100%;

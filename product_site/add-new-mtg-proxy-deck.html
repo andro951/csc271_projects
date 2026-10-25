@@ -12,12 +12,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Add a New MTG Proxy Deck | Bulk Proxy Forge</title>
-        <meta name="description" content="Start preparing printable MTG proxy cards from a deck list. Paste a deck link to begin the Bulk Proxy Forge card workflow.">
+        <meta name="description" content="Paste an MTG decklist link to start the planned workflow from decklist to printable proxy cards in Bulk Proxy Forge.">
         <meta property="og:title" content="Add a New MTG Proxy Deck | Bulk Proxy Forge">
-        <meta property="og:description" content="Start preparing printable MTG proxy cards from a deck list. Paste a deck link to begin the Bulk Proxy Forge card workflow.">
+        <meta property="og:description" content="Paste an MTG decklist link to start the planned workflow from decklist to printable proxy cards in Bulk Proxy Forge.">
         <meta property="og:url" content="https://isaacrichards.rhody.dev/csc271_projects/product_site/add-new-mtg-proxy-deck.html">
-        <meta property="og:image" content="https://isaacrichards.rhody.dev/csc271_projects/product_site/images/logo.png">
-        <link rel="icon" type="image/png" href="images/logo_icon.png">
+        <meta property="og:image" content="https://isaacrichards.rhody.dev/csc271_projects/product_site/images/logo.webp">
+        <link rel="icon" type="image/png" href="images/logo_icon.png" sizes="64x64">
         <link rel="stylesheet" href="css/common.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEV57V2D13"></script>
@@ -54,7 +54,7 @@
                             align-items: center;/*Y justify*/
                         ">
                         <img
-                        src="images/logo.png"
+                        src="images/logo.webp"
                         alt=""
                         style="
                             padding: 2% 2%;
@@ -87,7 +87,7 @@
                         title="Help"
                         aria-label="Help"
                         href="mtg-proxy-card-help.html">
-                        <img src="images/help.png" alt="">
+                        <img src="images/help.webp" alt="">
                     </a>
                     <a class="img_button"
                         title="Discord Server"
@@ -99,7 +99,7 @@
                     </a>
                 </div>
             </div>
-            <div
+            <main
                 id="main_area"
                 style="
                     /* border: 1px solid white; */
@@ -166,7 +166,7 @@
                                         align-items: flex-end;
                                         font-size: 125%;
                                     ">
-                                    Paste a deck link below to start preparing printable MTG proxy cards.
+                                    Paste an MTG decklist link below to start the planned workflow for printable proxy cards.
                                 </div>
                                 <div class="row"
                                     style="
@@ -175,7 +175,7 @@
                                     ">
                                     <input
                                         type="text"
-                                        placeholder="Paste deck link here"
+                                        placeholder="Paste MTG decklist link here"
                                         style="
                                             width: 100%;
                                             height: 100%;
@@ -215,9 +215,9 @@
                                             style="
                                                 flex: 1;/*Fill remaining space*/
                                             ">
-                                            <a id="continue_button" href="choose_look.html">
+                                            <button id="continue_button" type="button" onclick="alert('Not implemented yet.')">
                                                 Continue
-                                            </a>
+                                            </button>
                                         </div>
                                         <div class="row"
                                             style="
@@ -238,7 +238,7 @@
                      </div>
                      <div class="col col_gutter"></div>
                 </div>
-            </div>
+            </main>
         </div>
     </body>
 </html>
