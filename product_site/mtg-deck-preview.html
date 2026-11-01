@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+    Name: Isaac Richards
+    Date: November 1, 2026
+    Description: Preview an imported deck as a grid of card names and images.
+
+    AI-assisted: I asked ChatGPT to do the initial implementation, then
+    requested refinements. I manually reviewed and edited the code.
+    Detailed AI documentation: ../assignments/assignment7/richards_ai_documentation.md
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MTG Deck Preview | Bulk Proxy Forge</title>
+        <meta name="description" content="Preview the names and images of cards imported from a public Scryfall deck.">
+        <meta property="og:title" content="MTG Deck Preview | Bulk Proxy Forge">
+        <meta property="og:description" content="Preview the names and images of cards imported from a public Scryfall deck.">
+        <meta property="og:url" content="https://isaacrichards.rhody.dev/csc271_projects/product_site/mtg-deck-preview.html">
+        <meta property="og:image" content="https://isaacrichards.rhody.dev/csc271_projects/product_site/images/logo.webp">
+        <link rel="icon" type="image/png" href="images/logo_icon.png" sizes="64x64">
+        <link rel="stylesheet" href="css/common.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XEV57V2D13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XEV57V2D13');
+    </script>
+        <script src="js/deck_preview.js" defer></script>
+    </head>
+    <body style="margin: 0;"><!-- Remove the default margin -->
+        <div
+            id="page_container"
+            class="col"
+            style="
+                min-height: 100dvh;
+            ">
+
+            <!-- Top Bar -->
+            <div
+                id="top_bar"
+                class="row header"
+                style="
+                    border: 1px solid white;
+                    height: 10dvh;
+                    align-items: center;/*Y justify, not really needed here, but goot to have in rows in general.*/
+                ">
+                <div class="logo_container">
+                    <a href="mtg-proxy-main.html"
+                        title="Main Page"
+                        aria-label="Bulk Proxy Forge Main Page"
+                        style="
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;/*X justify*/
+                            align-items: center;/*Y justify*/
+                        ">
+                        <img
+                        src="images/logo.webp"
+                        alt=""
+                        style="
+                            padding: 2% 2%;
+                        ">
+                    </a>
+                </div>
+                <div
+                    id="top_bar_empty_space"
+                    class="row_fill">
+                    <!-- Intentionally empty-->
+                </div>
+                <div
+                    id="top_bar_buttons_container"
+                    style="
+                        /* border: 1px solid white; */
+                        max-width: 70%;
+                        height: 100%;
+                        width: fit-content;
+                        display: flex;
+                        justify-content: center;/*X justify*/
+                        align-items: center;/*Y justify*/
+                        padding: 2px 2px;
+                        gap: 2px;/*Space between children*/
+                    ">
+                    <a class="site_nav_button"
+                        title="Help"
+                        aria-label="Help"
+                        href="mtg-proxy-card-help.html">
+                        <img src="images/help.webp" alt="">
+                    </a>
+                    <a class="img_button"
+                        title="Discord Server"
+                        aria-label="Discord Server"
+                        href="https://discord.gg/au2rCSbG2B"
+                        target="_blank"
+                        >
+                        <img src="images/discord.png" alt="">
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Main Area -->
+            <main
+                id="main_area"
+                style="
+                    /* border: 1px solid white; */
+                    flex: 1;/*Fill remaining space*/
+                ">
+                <div class="col"
+                    style="
+                        border: 1px solid white;
+                        flex: 1;/*Fill remaining space*/
+                        padding: 0 8px;
+                    ">
+                    <div class="row">
+                        <h1 id="deck_name">Loading deck...</h1>
+                    </div>
+                    <div class="row">
+                        <p id="card_count"></p>
+                    </div>
+                    <div id="card_grid">
+                        <!-- Filled in by deck_preview.js -->
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
