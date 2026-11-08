@@ -63,4 +63,4 @@ Tested the full navigation in Edge with the live Supernatural artifact tokens de
 
 I asked ChatGPT to do the initial script and documentation work, then requested refinements to simplify the code, preserve my existing pages, and add a separate card preview grid. I manually reviewed and edited the code and asked questions about the JavaScript and layout as I worked through it.
 
-The [detailed AI documentation](../../assignments/assignment7/richards_ai_documentation.md) contains the exact user and assistant messages from the start of Assignment 8 through my request to document the conversation.
+The [detailed AI documentation](../../assignments/assignment8/richards_ai_documentation.md) contains the exact user and assistant messages from the start of Assignment 8 through my request to document the conversation.

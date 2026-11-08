@@ -6,7 +6,11 @@ Date: November 1, 2026
 Description: Display an imported Scryfall deck as a grid of names and images.
 AI-assisted suggestion: I asked ChatGPT to do the initial implementation,
 then requested refinements. I manually reviewed and edited the code.
-Detailed AI documentation: ../../assignments/assignment7/richards_ai_documentation.md
+Detailed AI documentation: ../../assignments/assignment8/richards_ai_documentation.md
+
+Assignment 9 AI-assisted: ChatGPT helped group commanders, implement the
+required loops, and draft the decision tree and flowchart.
+Detailed AI documentation: ../../assignments/assignment9/richards_ai_documentation.md
 */
 
 //#region Page Elements
@@ -19,10 +23,14 @@ function createElement(tag, text = ``) {
 
 const deckNameH1 = document.getElementById(`deck_name`);
 const cardCountP = document.getElementById(`card_count`);
+const mainArea = document.getElementById(`main_area`);
 const gridDiv = document.getElementById(`card_grid`);
+const commanderGrid = createElement(`div`);
 gridDiv.style.display = `grid`;
+commanderGrid.style.display = `grid`;
 const gap = 4;
 gridDiv.style.gap = `${gap}px`;
+commanderGrid.style.gap = `${gap}px`;
 
 //#endregion
 
@@ -34,7 +42,9 @@ function updateGridColumns() {
     let columns = Math.floor(gridWidth / cardMinWidth);
     columns = Math.max(1, columns);
 
-    gridDiv.style.gridTemplateColumns = `repeat(${columns}, minmax(0, 1fr))`;
+    const gridColumns = `repeat(${columns}, minmax(0, 1fr))`;
+    gridDiv.style.gridTemplateColumns = gridColumns;
+    commanderGrid.style.gridTemplateColumns = gridColumns;
 }
 
 updateGridColumns();
@@ -79,10 +89,19 @@ async function loadDeck() {
         const deck = await response.json();
         let totalCards = 0;
         const cards = document.createDocumentFragment();
+        const commanderCards = document.createDocumentFragment();
         for (const [section, entries] of Object.entries(deck.entries)) {
+            let sectionCards;
             if (section === `sideboard` || section === `maybeboard`)
                 continue;
+            else if (entries.length === 0)
+                continue;
+            else if (section === `commanders`)
+                sectionCards = commanderCards;
+            else
+                sectionCards = cards;
 
+            //Use for...of to build a card tile for each entry without needing its index.
             for (const entry of entries) {
                 if (!entry.card_digest) {
                     //Scryfall includes blank editor rows in its exports.
@@ -96,8 +115,10 @@ async function loadDeck() {
                 const quantity = entry.count;
                 totalCards += quantity;
                 const cardArticle = createElement(`article`);
-                const nameP = createElement(`p`, `${cardName} (${quantity}x)`);
+                const nameP = createElement(`p`);
                 nameP.className = `card_name`;
+                nameP.dataset.cardName = cardName;
+                nameP.dataset.quantity = quantity;
                 const cardImage = createElement(`img`);
                 cardImage.src = entry.card_digest.image_uris.front;
                 cardImage.alt = cardName;
@@ -105,7 +126,7 @@ async function loadDeck() {
                 cardImage.style.aspectRatio = `5 / 7`;
                 cardImage.style.objectFit = `contain`;
                 cardArticle.append(nameP, cardImage);
-                cards.append(cardArticle);
+                sectionCards.append(cardArticle);
             }
         }
 
@@ -115,9 +136,28 @@ async function loadDeck() {
         tempP.append(createElement(`strong`, `${totalCards} cards`));
         cardCountP.innerHTML = tempP.innerHTML;
 
+        if (commanderCards.firstChild) {
+            commanderGrid.append(commanderCards);
+            gridDiv.before(createElement(`h2`, `Commanders`), commanderGrid);
+            if (cards.firstChild)
+                gridDiv.before(createElement(`h2`, `Deck`));
+        }
+
         gridDiv.append(cards);
 
-        const names = gridDiv.getElementsByClassName(`card_name`);
+        const cardLabels = mainArea.querySelectorAll(`.card_name`);
+        if (cardLabels.length > 0) {
+            let labelIndex = 0;
+            //Use while to format each label until the NodeList runs out of entries.
+            while (labelIndex < cardLabels.length) {
+                const label = cardLabels[labelIndex];
+                const {cardName, quantity} = label.dataset;
+                label.textContent = `${cardName} (${quantity}x)`;
+                labelIndex++;
+            }
+        }
+
+        const names = mainArea.getElementsByClassName(`card_name`);
         for (const name of names) {
             name.style.fontSize = `14px`;
             name.style.height = `14px`;
@@ -125,7 +165,7 @@ async function loadDeck() {
             name.style.overflow = `hidden`;
         }
 
-        const images = gridDiv.getElementsByTagName(`img`);
+        const images = mainArea.getElementsByTagName(`img`);
         for (const image of images) {
             image.style.display = `block`;
         }

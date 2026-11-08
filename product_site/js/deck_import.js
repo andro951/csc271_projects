@@ -6,7 +6,7 @@ Date: November 1, 2026
 Description: Import a public Scryfall deck and display its cards and total quantity.
 AI-assisted suggestion: I asked ChatGPT to do the initial implementation,
 then requested refinements. I manually reviewed and edited the code.
-Detailed AI documentation: ../../assignments/assignment7/richards_ai_documentation.md
+Detailed AI documentation: ../../assignments/assignment8/richards_ai_documentation.md
 */
 
 //#region Page Elements
