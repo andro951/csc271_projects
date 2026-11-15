@@ -1,6 +1,6 @@
 # Decision Tree
 
-The deck preview checks each section in the Scryfall export to decide whether to skip it, show its cards in the Commanders grid, or show them in the main deck grid. The checks run in this order in [`deck_preview.js`](../js/deck_preview.js).
+The deck preview checks each section in the Scryfall export to decide whether to skip it, show its cards in the Commanders grid, or show them in the main deck grid. The checks run in this order in [`deck_loader.js`](../js/deck_loader.js).
 
 Is the section the sideboard or maybeboard?
     Yes - Skip it (These sections are generally not wanted for the final deck)
