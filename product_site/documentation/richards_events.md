@@ -40,3 +40,5 @@ flowchart TD
 # AI Assistance
 
 I asked Codex to compare the assignment with the existing site and then complete the local work. It identified the Help form, added the event listeners and validation in `help_form.js`, connected the script to the Help page, and wrote this document and flowchart. I asked it to simplify the implementation to the assignment requirements. It also checked the focus, blur, and submit paths in Edge.
+
+[Assignment 11 chat transcript](../../assignments/assignment11/richards_ai_documentation.md)
