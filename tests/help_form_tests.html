@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Help Form Tests</title>
+    <script src="../product_site/js/help_form.js" defer></script>
+    <script src="help_form_tests.js" defer></script>
+</head>
+<body>
+    <h1>Help Form Tests</h1>
+    <p id="test_summary">Running tests...</p>
+    <ul id="test_results"></ul>
+    <form id="help_form">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" required maxlength="100">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html>
